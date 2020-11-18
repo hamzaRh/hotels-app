@@ -1,0 +1,22 @@
+<div class="toolbar">
+  <a href="https://www.limehome.com/">
+    <img src="../assets/images/logo.svg"/>
+  </a>
+  <a href="#" (click)="openNav()">
+    <img src="../assets/images/burger.svg"/>
+  </a>
+</div>
+
+<div class="sidenav" #siedeNav>
+  <a href="#" class="closebtn" (click)="closeNav()">&times;</a>
+  <a href="https://www.limehome.com/">Home</a>
+</div>
+
+
+<div class="content" role="main">
+  <app-form [isDisabled]="inputDisbled"></app-form>
+  <app-map (isInputDisabled)=disableInput($event)></app-map>  
+  
+</div>
+
+

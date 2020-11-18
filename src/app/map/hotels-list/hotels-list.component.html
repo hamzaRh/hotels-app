@@ -1,0 +1,17 @@
+<div class="hotel-list">
+    <ul>
+        <li *ngFor="let hotel of hotelsList; index as i" (click)="select(i)">
+            <span class="content-block">
+                <span class="image">
+                    <img src="../../../assets/images/house.jpg"/>
+                </span>
+                <span class="description">
+                    <span class="title">{{hotel?.title}}</span>               
+                    <span class="price">$98</span>
+                </span>
+            </span>            
+            <button>Book</button> 
+        </li>
+    </ul>
+    
+</div> 

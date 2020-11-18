@@ -1,0 +1,95 @@
+@import '../helpers/variables';
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  background-color: #fefefe;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: $primaryColor;
+  color: white;
+  font-weight: 600;
+
+  img {
+    margin: 0 16px;
+  }
+}
+
+
+.content {
+  display: flex;
+  margin: 82px auto 32px;
+  padding: 0;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+
+  app-map {
+    width: 100%;
+  }
+
+  input {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 11px 10px;
+    margin: 0;
+    width: 200px;
+    outline: 0;
+    border: 1px solid #e3e3e3;
+
+    &:focus {
+      border-color: $secondaryColor;
+    }
+  }
+
+  button {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-left: 20px;
+    padding: 14px 35px;
+    width: 150px;
+    height: 44px;
+    color: #fff;
+    vertical-align: bottom;
+    background: $secondaryColor;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+    &:hover {
+      color: $grayColor;
+      background: $primaryColor;
+    }
+  }
+}
+
+
+@media screen and (max-width: $breakPoint) {
+  .content {
+    input {
+      width: 45%;
+    }
+
+    button {
+      width: 35%;
+      font-size: 18px;
+      padding: 14px 20px;
+
+      &.dismissButton {
+        width: 100%;
+      }
+    }
+  }
+}
